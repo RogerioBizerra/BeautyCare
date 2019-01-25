@@ -1,0 +1,74 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/geturi.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var campo1 = decodeURI(getUrlVars()["campo1"]);
+			var campo2 = decodeURI(getUrlVars()["campo2"]);
+			var campo3 = decodeURI(getUrlVars()["campo3"]);
+			var campo4 = decodeURI(getUrlVars()["campo4"]);
+			//$("#campo1").val(campo1);
+			//$("#campo2").val(campo2);
+			//$("#campo3").val(campo3);
+			//$("#campo4").val(campo4);
+			$("#update").click(function () {
+				var campo1 = $("#campo1").val();
+				var campo2 = $("#campo2").val();
+				var campo3 = $("#campo3").val();
+				var campo4 = $("#campo4").val();
+				var dataString = "campo1=" + campo1 + "&campo2=" + campo2 + "&campo3=" + campo3 + "&campo4=" + campo4 + "&update=";
+				$.ajax({
+					type: "POST",
+					url: "http://rtpublicity.com.br/sites/panasonic/daiso/beautycare/api/createteam.php",
+					data: dataString,
+					crossDomain: true,
+					cache: false,
+					beforeSend: function () {
+						$("#update").val('Connecting...');
+					},
+					success: function (data) {
+						if (data == "success") {
+							alert("Updated");
+							$("#update").val("Update");
+						} else if (data == "error") {
+							alert("error");
+						}
+					}
+				});
+
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<div class="bar bar-header bar-positive" style="margin-bottom:80px;">
+			<a href="index.html" class="button button-clear">Home</a>
+			<h1 class="title">Update Database</h1>
+			<a class="button button-clear" href="readjson.html">Read JSON</a>
+		</div>
+		<br/><br/>
+		<div class="list">
+			<div class="item">
+				<label>Title</label>
+				<input type="text" id="campo1" value=""/>
+			</div>
+			<div class="item">
+				<label>Title</label>
+				<input type="text" id="campo2" value=""/>
+			</div>
+			<div class="item">
+				<label>Duration</label>
+				<input type="text" id="campo3" value=""/>
+			</div>
+			<div class="item">
+				<label>Price</label>
+				<input type="text" id="campo4" value=""/>
+			</div>
+			<div class="item">
+				<input type="button" id="update" class="button button-block" value="Update"/>
+			</div>
+		</div>
+	</body>
+</html>
