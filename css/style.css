@@ -1,0 +1,206 @@
+
+/*GLOBAL*/
+
+@font-face {
+    font-family: 'DINCond';
+    src: url('../fonts/DINCond-Regular.woff2') format('woff2'),
+        url('../fonts/DINCond-Regular.woff') format('woff'),
+        url('../fonts/DINCond-Regular.ttf') format('truetype'),
+        url('../fonts/DINCond-Regular.svg#DINCond-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINCond';
+    src: url('../fonts/DINCond-Bold.woff2') format('woff2'),
+        url('../fonts/DINCond-Bold.woff') format('woff'),
+        url('../fonts/DINCond-Bold.ttf') format('truetype'),
+        url('../fonts/DINCond-Bold.svg#DINCond-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    font-family: 'DINCond';
+	font-size: 28px;
+	color: #fff;
+	font-weight: 300;
+	overflow:hidden;
+}
+strong{
+    font-family: 'DINCond';
+    font-weight: bold !important;
+}
+.logo{
+	position: absolute;
+    top: 24px;
+    left: 50px;
+    z-index: 1;
+}
+.form-control{
+	display: inline-block;
+	border-radius: 0;
+	border: 1px solid #fff;
+	box-shadow:0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.font23{
+	font-size: 23px;
+}
+/*TELAS GLOBAIS*/
+
+.tela-1, .tela-geral, .tela-final{
+	height: 768px;
+}
+.tela-geral{
+	background-image: url('../images/back-geral.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.nome-destaque{
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+/*TELA 1*/
+.tela-1{
+	background-image: url('../images/back-tela1.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.circle-tela1{
+	position: absolute;
+    top: 45px;
+    left: 35px;
+}
+.seta-tela1{
+	position: absolute;
+    top: 685px;
+    left: 65px;
+}
+.ir-tela-2{
+	position: absolute;
+    top: 385px;
+    left: 200px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.ir-tela-2:hover{
+    outline: none;
+}
+
+/*TELA 2*/
+.bg-tela2{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela2{
+	position:relative;
+	top:130px;
+}
+
+/*TELA 3*/
+.bg-tela3{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.cont-tela3{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 4*/
+.bg-tela4{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.cont-tela4{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 5*/
+.bg-tela5{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela5{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 6*/
+.bg-tela6{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela6{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 7*/
+.bg-tela7{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela7{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 8*/
+.bg-tela8{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela8{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 9*/
+.bg-tela9{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela9{
+	position:relative;
+	top:110px;
+}
+
+/*TELA 10*/
+.bg-tela10{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont-tela10{
+	position:relative;
+	top:110px;
+}
+/*TELA 11*/
+.tela-final{
+	background-image: url('../images/back-final.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.cont-tela11{
+	position:relative;
+	top:200px;
+}
+/*PERGUNTAS*/
+.pergunta11, .pergunta12, .pergunta13, .pergunta14, .pergunta15{
+	width: 100%;
+	display: none;
+}
+

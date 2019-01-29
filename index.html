@@ -1,74 +1,385 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/geturi.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var campo1 = decodeURI(getUrlVars()["campo1"]);
-			var campo2 = decodeURI(getUrlVars()["campo2"]);
-			var campo3 = decodeURI(getUrlVars()["campo3"]);
-			var campo4 = decodeURI(getUrlVars()["campo4"]);
-			//$("#campo1").val(campo1);
-			//$("#campo2").val(campo2);
-			//$("#campo3").val(campo3);
-			//$("#campo4").val(campo4);
-			$("#update").click(function () {
-				var campo1 = $("#campo1").val();
-				var campo2 = $("#campo2").val();
-				var campo3 = $("#campo3").val();
-				var campo4 = $("#campo4").val();
-				var dataString = "campo1=" + campo1 + "&campo2=" + campo2 + "&campo3=" + campo3 + "&campo4=" + campo4 + "&update=";
-				$.ajax({
-					type: "POST",
-					url: "http://rtpublicity.com.br/sites/panasonic/daiso/beautycare/api/createteam.php",
-					data: dataString,
-					crossDomain: true,
-					cache: false,
-					beforeSend: function () {
-						$("#update").val('Connecting...');
-					},
-					success: function (data) {
-						if (data == "success") {
-							alert("Updated");
-							$("#update").val("Update");
-						} else if (data == "error") {
-							alert("error");
-						}
-					}
-				});
+﻿<html>
+  	<head>
+	    <meta charset="utf-8">
+	    <title>Beauty Care - Panasonic</title>
+	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 
-			});
-		});
-	</script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/hover-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<div class="bar bar-header bar-positive" style="margin-bottom:80px;">
-			<a href="index.html" class="button button-clear">Home</a>
-			<h1 class="title">Update Database</h1>
-			<a class="button button-clear" href="readjson.html">Read JSON</a>
+		<div class="tela-1">
+			<img alt="Panasonic" src="images/back-bt-tela1.png" class="circle-tela1">
+			<img alt="Panasonic" src="images/seta-bt-tela1.png" class="seta-tela1 animated infinite fadeInLeft">
+			<button class="ir-tela-2 hvr-bounce-in"><img alt="Panasonic" src="images/bt-tela1.png"></button>
 		</div>
-		<br/><br/>
-		<div class="list">
-			<div class="item">
-				<label>Title</label>
-				<input type="text" id="campo1" value=""/>
-			</div>
-			<div class="item">
-				<label>Title</label>
-				<input type="text" id="campo2" value=""/>
-			</div>
-			<div class="item">
-				<label>Duration</label>
-				<input type="text" id="campo3" value=""/>
-			</div>
-			<div class="item">
-				<label>Price</label>
-				<input type="text" id="campo4" value=""/>
-			</div>
-			<div class="item">
-				<input type="button" id="update" class="button button-block" value="Update"/>
+		<div class="tela-geral tela-2">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-2.png" class="bg-tela2">
+			<div class="container cont-tela2">
+				<div class="row">
+					<div class="col-md-12 form-group">
+						<div class="row">
+							<label for="resposta1" class="col-md-2 text-right">Nome</label>
+							<input type="text" class="form-control col-md-6 resposta1" id="resposta1" name="resposta1" placeholder="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="row">
+							<label for="resposta2" class="col-md-2 text-right">E-mail</label>
+							<input type="email" class="form-control col-md-6 resposta2" id="resposta2" name="resposta2" placeholder="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="row">
+							<label for="resposta3" class="col-md-2 text-right">Telefone</label>
+							<input type="text" class="form-control col-md-6 resposta3" id="resposta3" name="resposta3" placeholder="">
+						</div>
+					</div>
+					<div class="col-md-10 form-group text-right">
+						<button class="ir-tela-3 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class="tela-geral tela-3">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-3.png" class="bg-tela3">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela3">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+					</div>
+					<div class="col-md-12 form-group">
+						<p>Sexo:</p>
+						<div class="row">
+							<label for="sexo1" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta4" id="sexo1" name="resposta4" value="Feminino"> Feminino</label>
+							<label for="sexo2" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta4" id="sexo2" name="resposta4" value="Masculino"> Masculino</label>
+							<label for="sexo3" class="col-md-3 text-left"><input type="radio" class="radio-inline resposta4" id="sexo3" name="resposta4" value="Prefiro não informar"> Prefiro não informar</label>
+						</div>
+					</div>
+					<div class="col-md-12 form-group mt-5">
+						<p>Idade:</p>
+						<div class="row">
+							<label for="idade1" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta5" id="idade1" name="resposta5" value="Até 20 anos"> Até 20 anos</label>
+							<label for="idade2" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta5" id="idade2" name="resposta5" value="21-30 anos"> 21-30 anos</label>
+							<label for="idade3" class="col-md-3 text-left"><input type="radio" class="radio-inline resposta5" id="idade3" name="resposta5" value="31-40 anos"> 31-40 anos</label>
+						</div>
+						<div class="row">
+							<label for="idade4" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta5" id="idade4" name="resposta5" value="41-50 anos"> 41-50 anos</label>
+							<label for="idade5" class="col-md-3 text-left"><input type="radio" class="radio-inline resposta5" id="idade5" name="resposta5" value="Mais de 51 anos"> Mais de 51 anos</label>
+						</div>
+					</div>
+					<div class="col-md-9 form-group text-right">
+						<button class="voltar-tela-2 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+						<button class="ir-tela-4 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="tela-geral tela-4">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-4.png" class="bg-tela4">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela4">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>Numa escala de 1 a 5, dê uma nota, sendo 1 "não gostei" e 5 "gostei".</p>
+					</div>
+					<div class="col-md-12 form-group mb-0">
+						<p class="mb-3 font23"><img alt="Panasonic" src="images/bly.png"> Escova de Dente:</p>
+						<div class="row">
+							<label for="escova1" class="col-md-1 offset-md-2 text-center"><input type="radio" class="radio-inline resposta6" id="escova1" name="resposta6" value="1"><br>1</label>
+							<label for="escova2" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta6" id="escova2" name="resposta6" value="2"><br>2</label>
+							<label for="escova3" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta6" id="escova3" name="resposta6" value="3"><br>3</label>
+							<label for="escova4" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta6" id="escova4" name="resposta6" value="4"><br>4</label>
+							<label for="escova5" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta6" id="escova5" name="resposta6" value="5"><br>5</label>
+						</div>
+					</div>
+					<div class="col-md-12 form-group mb-0">
+						<p class="mb-3 font23"><img alt="Panasonic" src="images/blr.png"> Aparador de Pelos do Nariz:</p>
+						<div class="row">
+							<label for="aparador1" class="col-md-1 offset-md-2 text-center"><input type="radio" class="radio-inline resposta7" id="aparador1" name="resposta7" value="1"><br>1</label>
+							<label for="aparador2" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta7" id="aparador2" name="resposta7" value="2"><br>2</label>
+							<label for="aparador3" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta7" id="aparador3" name="resposta7" value="3"><br>3</label>
+							<label for="aparador4" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta7" id="aparador4" name="resposta7" value="4"><br>4</label>
+							<label for="aparador5" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta7" id="aparador5" name="resposta7" value="5"><br>5</label>
+						</div>
+					</div>
+					<div class="col-md-12 form-group mb-0">
+						<p class="mb-3 font23"><img alt="Panasonic" src="images/blg.png"> Barbeador:</p>
+						<div class="row">
+							<label for="barbeador1" class="col-md-1 offset-md-2 text-center"><input type="radio" class="radio-inline resposta8" id="barbeador1" name="resposta8" value="1"><br>1</label>
+							<label for="barbeador2" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta8" id="barbeador2" name="resposta8" value="2"><br>2</label>
+							<label for="barbeador3" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta8" id="barbeador3" name="resposta8" value="3"><br>3</label>
+							<label for="barbeador4" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta8" id="barbeador4" name="resposta8" value="4"><br>4</label>
+							<label for="barbeador5" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta8" id="barbeador5" name="resposta8" value="5"><br>5</label>
+						</div>
+					</div>
+					<div class="col-md-12 form-group mb-0">
+						<p class="mb-3 font23"><img alt="Panasonic" src="images/blo.png"> Irrigador Bucal:</p>
+						<div class="row">
+							<label for="irrigador1" class="col-md-1 offset-md-2 text-center"><input type="radio" class="radio-inline resposta9" id="irrigador1" name="resposta9" value="1"><br>1</label>
+							<label for="irrigador2" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta9" id="irrigador2" name="resposta9" value="2"><br>2</label>
+							<label for="irrigador3" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta9" id="irrigador3" name="resposta9" value="3"><br>3</label>
+							<label for="irrigador4" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta9" id="irrigador4" name="resposta9" value="4"><br>4</label>
+							<label for="irrigador5" class="col-md-1 text-center"><input type="radio" class="radio-inline resposta9" id="irrigador5" name="resposta9" value="5"><br>5</label>
+						</div>
+					</div>
+					<div class="col-md-9 form-group text-right">
+						<button class="voltar-tela-3 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+						<button class="ir-tela-5 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-geral tela-5">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-5.png" class="bg-tela5">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela5">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>Qual produto você mais gostou (<strong>pode selecionar mais de uma resposta</strong>)?</p>
+					</div>
+					<div class="col-md-3 form-group mb-0 text-center">
+						<p class="mb-3 font23">
+							Escova de Dente
+							<br><img alt="Panasonic" src="images/escovas.png">
+						</p>
+						<div class="row justify-content-center">
+							<label for="escovacheck1" class="col-md-4 text-center"><input type="checkbox" class="checkbox-inline resposta10" id="escovacheck1" name="resposta10" value="Escova Vermelha"></label>
+							<label for="escovacheck2" class="col-md-4 text-center"><input type="checkbox" class="checkbox-inline resposta10" id="escovacheck2" name="resposta10" value="Escova Rosa"></label>
+							<label for="escovacheck3" class="col-md-4 text-center"><input type="checkbox" class="checkbox-inline resposta10" id="escovacheck3" name="resposta10" value="Escova Preta"></label>
+						</div>
+					</div>
+					<div class="col-md-3 form-group text-center">
+						<p class="mb-3 font23">
+							Aparador de Pelos do Nariz
+							<br><img alt="Panasonic" src="images/aparador.png">
+						</p>
+						<div class="row">
+							<label for="aparadorcheck1" class="col-md-12 text-center"><input type="checkbox" class="checkbox-inline resposta10" id="aparadorcheck1" name="resposta10" value="Aparador"></label>
+						</div>
+					</div>
+					<div class="col-md-3 form-group mb-0 text-center">
+						<p class="mb-3 font23">
+							Barbeador
+							<br><img alt="Panasonic" src="images/barbeador.png">
+						</p>
+						<div class="row">
+							<label for="barbeadorcheck1" class="col-md-12 text-center"><input type="checkbox" class="checkbox-inline resposta10" id="barbeadorcheck1" name="resposta10" value="Barbeador"></label>
+						</div>
+					</div>
+					<div class="col-md-3 form-group mb-0 text-center">
+						<p class="mb-3 font23">
+							Irrigador Bucal
+							<br><img alt="Panasonic" src="images/irrigador.png">
+						</p>
+						<div class="row">
+							<label for="irrigadorcheck1" class="col-md-12 text-center"><input type="checkbox" class="checkbox-inline resposta10" id="irrigadorcheck1" name="resposta10" value="Irrigador"></label>
+						</div>
+					</div>
+					<div class="col-md-10 form-group mt-1 text-right ">
+						<button class="voltar-tela-4 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+						<button class="ir-tela-6 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-geral tela-6">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-6.png" class="bg-tela6">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela6">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>O que te atraiu no produto que mais gostou?</p>
+					</div>
+					<div class="col-md-12 form-group mb-0 text-center">
+						<div class="row">
+							<div class="col-md-12 form-group text-left">
+								<p class="font23 mb-0">
+									<label for="atrativos1"><input type="radio" class="radio-inline resposta11" id="atrativos1" name="resposta11" value="Design"> Design</label>
+									<br><label for="atrativos2"><input type="radio" class="radio-inline resposta11" id="atrativos2" name="resposta11" value="Funcionalidades"> Funcionalidades</label>
+									<br><label for="atrativos3"><input type="radio" class="radio-inline resposta11" id="atrativos3" name="resposta11" value="Portabilidade"> Portabilidade</label>
+									<br><label for="atrativos4"><input type="radio" class="radio-inline resposta11" id="atrativos4" name="resposta11" value="Outros"> Outros</label>
+								</p>
+								<p class="pergunta11">
+									<input type="text" class="form-control col-md-6 resposta11a" id="resposta11a" name="resposta11a" placeholder="Descreva">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 form-group mt-0 pr-5 text-right">
+						<button class="voltar-tela-5 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+						<button class="ir-tela-7 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-geral tela-7">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-7.png" class="bg-tela7">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela7">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>Quanto você pagaria na Escova de Dente?</p>
+					</div>
+					<div class="col-md-12 form-group mb-0 text-center">
+						<div class="row">
+							<div class="col-md-12 form-group text-left">
+								<p class="font23 mb-0">
+									<label for="resposta12" class="col-auto text-left pl-0">R$</label><input type="text" class="form-control col-md-6 resposta12" id="resposta12" name="resposta12" placeholder="">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col pergunta12">
+						<div class="col-md-12 form-group">
+							<p>Se fosse <strong>R$189,00</strong> você compraria? </p>
+							<div class="row">
+								<label for="precoescova1" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta12a" id="precoescova1" name="resposta12a" value="Sim"> Sim</label>
+								<label for="precoescova2" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta12a" id="precoescova2" name="resposta12a" value="Não"> Não</label>
+							</div> 
+						</div>
+						<div class="col-md-9 form-group mt-5 pr-5 text-right">
+							<button class="voltar-tela-6 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+							<button class="ir-tela-8 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-geral tela-8">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-8.png" class="bg-tela8">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela8">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>Quanto você pagaria no Aparador de Pelos do Nariz?</p>
+					</div>
+					<div class="col-md-12 form-group mb-0 text-center">
+						<div class="row">
+							<div class="col-md-12 form-group text-left">
+								<p class="font23 mb-0">
+									<label for="resposta13" class="col-auto text-left pl-0">R$</label><input type="text" class="form-control col-md-6 resposta13" id="resposta13" name="resposta13" placeholder="">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col pergunta13">
+						<div class="col-md-12 form-group">
+							<p>Se fosse <strong>R$99,00</strong> você compraria? </p>
+							<div class="row">
+								<label for="precoaparador1" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta13a" id="precoaparador1" name="resposta13a" value="Sim"> Sim</label>
+								<label for="precoaparador2" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta13a" id="precoaparador2" name="resposta13a" value="Não"> Não</label>
+							</div>
+						</div>
+						<div class="col-md-9 form-group mt-5 pr-5 text-right">
+							<button class="voltar-tela-7 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+							<button class="ir-tela-9 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-geral tela-9">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-9.png" class="bg-tela9">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela9">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>Quanto você pagaria no Barbeador?</p>
+					</div>
+					<div class="col-md-12 form-group mb-0 text-center">
+						<div class="row">
+							<div class="col-md-12 form-group text-left">
+								<p class="font23 mb-0">
+									<label for="resposta14" class="col-auto text-left pl-0">R$</label><input type="text" class="form-control col-md-6 resposta14" id="resposta14" name="resposta14" placeholder="">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col pergunta14">
+						<div class="col-md-12 form-group">
+							<p>Se fosse <strong>R$149,00</strong> você compraria? </p>
+							<div class="row">
+								<label for="precobarbeador1" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta14a" id="precobarbeador1" name="resposta14a" value="Sim"> Sim</label>
+								<label for="precobarbeador2" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta14a" id="precobarbeador2" name="resposta14a" value="Não"> Não</label>
+							</div>
+						</div>
+						<div class="col-md-9 form-group mt-5 pr-5 text-right">
+							<button class="voltar-tela-8 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+							<button class="ir-tela-10 hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-geral tela-10">
+			<a href="index.html"><img alt="Panasonic" src="images/logo.png" class="logo"></a>
+			<img alt="Panasonic" src="images/tela-10.png" class="bg-tela10">
+			<p class="nome-destaque">Olá <strong>Priscila Queiroz</strong></p>
+			<div class="container cont-tela10">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong>Perguntas</strong></p>
+						<p>Quanto você pagaria no Irrigador Bucal?</p>
+					</div>
+					<div class="col-md-12 form-group mb-0 text-center">
+						<div class="row">
+							<div class="col-md-12 form-group text-left">
+								<p class="font23 mb-0">
+									<label for="resposta15" class="col-auto text-left pl-0">R$</label><input type="text" class="form-control col-md-6 resposta15" id="resposta15" name="resposta15" placeholder="">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col pergunta15">
+						<div class="col-md-12 form-group">
+							<p>Se fosse <strong>R$269,00</strong> você compraria? </p>
+							<div class="row">
+								<label for="precoirrigador1" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta15a" id="precoirrigador1" name="resposta15a" value="Sim"> Sim</label>
+								<label for="precoirrigador2" class="col-md-2 text-left"><input type="radio" class="radio-inline resposta15a" id="precoirrigador2" name="resposta15a" value="Não"> Não</label>
+							</div>
+						</div>
+						<div class="col-md-9 form-group mt-5 pr-5 text-right">
+							<button class="voltar-tela-9 hvr-bounce-in"><img alt="Panasonic" src="images/bt-voltar.png"></button>
+							<button id="enviarpesquisa" class="ir-tela-final hvr-bounce-in"><img alt="Panasonic" src="images/bt-continuar.png"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela-final">
+			<div class="container cont-tela11">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p><strong>Obrigado!</strong></p>
+						<p class="font23 mt-5">Priscila Queiroz, agradecemos por responder nossa pesquisa.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mask.min.js"></script>
+		<script src="js/geturi.js"></script>
+		<script src="js/transitions.js"></script>
+		<script src="js/settings.js"></script>
+		<script src="js/sendajax.js"></script>
 	</body>
 </html>

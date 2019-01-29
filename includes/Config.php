@@ -2,7 +2,6 @@
 /*
  * conexão com o banco de dados local
 */
-
 /*
 define('DB_USERNAME', 'rtpubli');
 define('DB_PASSWORD', 'Publicidade_1');

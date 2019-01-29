@@ -1,12 +1,10 @@
 ﻿<?php
  
-class DbOperation
-{
+class DbOperation {
     private $conn;
  
     //Constructor
-    function __construct()
-    {
+    function __construct() {
         require_once dirname(__FILE__) . '/Config.php';
         require_once dirname(__FILE__) . '/DbConnect.php';
         // opening db connection
@@ -15,10 +13,9 @@ class DbOperation
     }
  
     //Function to create a new user
-    public function createTeam($campo1, $campo2, $campo3, $campo4)
-    {
-        $stmt = $this->conn->prepare("INSERT INTO teste(`campo1`, `campo2`, `campo3`, `campo4`) values(?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $campo1, $campo2, $campo3, $campo4);
+    public function createTeam($resposta1, $resposta2, $resposta3, $resposta4, $resposta5, $resposta6, $resposta7, $resposta8, $resposta9, $resposta10, $resposta11, $resposta11a, $resposta12, $resposta12a, $resposta13, $resposta13a, $resposta14, $resposta14a, $resposta15, $resposta15a) {
+        $stmt = $this->conn->prepare("INSERT INTO pesquisa(`resposta1`, `resposta2`, `resposta3`, `resposta4`, `resposta5`, `resposta6`, `resposta7`, `resposta8`, `resposta9`, `resposta10`, `resposta11`, `resposta11a`, `resposta12`, `resposta12a`, `resposta13`, `resposta13a`, `resposta14`, `resposta14a`, `resposta15`, `resposta15a`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssssssssssssssss", $resposta1, $resposta2, $resposta3, $resposta4, $resposta5, $resposta6, $resposta7, $resposta8, $resposta9, $resposta10, $resposta11, $resposta11a, $resposta12, $resposta12a, $resposta13, $resposta13a, $resposta14, $resposta14a, $resposta15, $resposta15a);
         $result = $stmt->execute();
         $stmt->close();
         if ($result) {
