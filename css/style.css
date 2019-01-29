@@ -32,6 +32,17 @@ strong{
     font-family: 'DINCond';
     font-weight: bold !important;
 }
+img{
+    border: none;
+}
+button{
+    border: none;
+    background: transparent;
+    outline: none;
+}
+button:hover{
+    outline: none;
+}
 .logo{
 	position: absolute;
     top: 24px;
