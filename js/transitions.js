@@ -13,7 +13,7 @@ $('.tela-final').hide();
 
 $('.ir-tela-2').click(function () {
 	$('.tela-1').hide();
-	$('.tela-2').fadeIn(1000);
+	$('.tela-2').fadeIn(1500);
 	$('.tela-3').hide();
 	$('.tela-4').hide();
 	$('.tela-5').hide();
