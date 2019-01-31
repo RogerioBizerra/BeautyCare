@@ -1,10 +1,10 @@
-﻿<?php
+<?php
  
 //creating response array
 $response = array();
  
 if($_SERVER['REQUEST_METHOD']=='POST'){
- 
+
     //getting values
     $resposta1      = $_POST['resposta1'];
     $resposta2      = $_POST['resposta2'];
@@ -31,21 +31,20 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     require_once '../includes/DbOperation.php';
  
     $db = new DbOperation();
-    
+
     $sqlinsert = $db->createTeam($resposta1, $resposta2, $resposta3, $resposta4, $resposta5, $resposta6, $resposta7, $resposta8, $resposta9, $resposta10, $resposta11, $resposta11a, $resposta12, $resposta12a, $resposta13, $resposta13a, $resposta14, $resposta14a, $resposta15, $resposta15a);
 
     //inserting values 
     if($sqlinsert){
-        $response['error']=false;
-        $response['data']='success';
+        //$response['error']=false;
+        $response_array['status'] = 'success';
     }else{
- 
-        $response['error']=true;
-        $response['data']='error';
+        //$response['error']=true;
+        $response_array['status'] = 'error';
     }
  
 }else{
-    $response['error']=true;
-    $response['data']='error';
+    //$response['error']=true;
+    $response_array['status'] = 'error';
 }
-echo json_encode($response);
+echo json_encode($response_array);

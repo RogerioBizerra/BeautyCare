@@ -1,5 +1,5 @@
-﻿<?php
- 
+<?php
+
 class DbOperation {
     private $conn;
  

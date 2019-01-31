@@ -40,9 +40,10 @@ button{
     background: transparent;
     outline: none;
 }
-button:hover{
+button:hover, button:focus{
     outline: none;
 }
+
 .logo{
 	position: absolute;
     top: 24px;
@@ -54,6 +55,9 @@ button:hover{
 	border-radius: 0;
 	border: 1px solid #fff;
 	box-shadow:0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.font22{
+    font-size: 22px;
 }
 .font23{
 	font-size: 23px;
@@ -210,7 +214,7 @@ button:hover{
 	top:200px;
 }
 /*PERGUNTAS*/
-.pergunta11, .pergunta12, .pergunta13, .pergunta14, .pergunta15{
+.pergunta11, .pergunta12a, .pergunta13a, .pergunta14a, .pergunta15a{
 	width: 100%;
 	display: none;
 }

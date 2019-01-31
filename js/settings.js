@@ -6,6 +6,13 @@ spOptions = {
       field.mask(SPMaskBehavior.apply({}, arguments), options);
     }
 };
+$('.resposta1').on('change', function() {
+	var nomeCliente = $("#resposta1").val();
+
+	if(nomeCliente != ""){
+		$('.nomeCliente').text(nomeCliente);
+	}
+});
 
 $('.resposta3').mask(SPMaskBehavior, spOptions);
 
@@ -15,7 +22,7 @@ $('.resposta14').mask('000.000.000.000.000,00', {reverse: true});
 $('.resposta15').mask('000.000.000.000.000,00', {reverse: true});
 
 $('.resposta11').on('change', function() {
-	var resposta11 = $('input[name=resposta11]:checked').val();
+	var resposta11 = $('input:radio[name=resposta11]:checked').val();
 	if (resposta11 == "Outros") {
 		$('.pergunta11').slideDown();
 		$( ".resposta11a" ).focus();
@@ -23,16 +30,20 @@ $('.resposta11').on('change', function() {
 	else{
 		$('.pergunta11').slideUp();		
 	}
+});/**/
+
+$('.pergunta12').click(function () {
+	$('.pergunta12a').slideDown();
 });
-$('.resposta12').on('change', function() {
-	$('.pergunta12').slideDown();
+
+$('.pergunta13').click(function () {
+	$('.pergunta13a').slideDown();
 });
-$('.resposta13').on('change', function() {
-	$('.pergunta13').slideDown();
+
+$('.pergunta14').click(function () {
+	$('.pergunta14a').slideDown();
 });
-$('.resposta14').on('change', function() {
-	$('.pergunta14').slideDown();
-});
-$('.resposta15').on('change', function() {
-	$('.pergunta15').slideDown();
+
+$('.pergunta15').click(function () {
+	$('.pergunta15a').slideDown();
 });
