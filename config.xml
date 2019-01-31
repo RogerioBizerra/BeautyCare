@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
 id = "br.com.rtpublicity.beautycare"
-version = "1.0.5">
+version = "1.0.6">
 	<name>Panasonic Beauty Care</name>
 	<description>A Panasonic traz ao Brasil uma linha de produtos do segmento de beleza que já fazem sucesso no exterior.</description>
 	<author email="contato@rtpublicity.com.br" href="http://rtpublicity.com.br/sites/panasonic/daiso/beautycare">RT Publicity</author>
