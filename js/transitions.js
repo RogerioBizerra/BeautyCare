@@ -35,7 +35,7 @@ $('.ir-tela-3').click(function () {
 	}
 	var flagTela3 = "";
 
-	/*if($('input[name=resposta1]').val().length === 0) flagTela3 += "<strong>Nome</strong><br>";
+	if($('input[name=resposta1]').val().length === 0) flagTela3 += "<strong>Nome</strong><br>";
 	if($('input[name=resposta3]').val().length === 0) flagTela3 += "<strong>Telefone</strong><br>";
 
 	if($('input[name=resposta2]').val().length === 0){
