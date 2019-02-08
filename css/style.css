@@ -78,6 +78,13 @@ button:hover, button:focus{
     top: 30px;
     right: 100px;
 }
+.bt-navs{
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -90px;
+    width: 180px;
+}
 /*TELA 1*/
 .tela-1{
 	background-image: url('../images/back-tela1.jpg');
@@ -216,7 +223,6 @@ button:hover, button:focus{
 }
 /*PERGUNTAS*/
 .pergunta11, .pergunta12a, .pergunta13a, .pergunta14a, .pergunta15a{
-	width: 100%;
 	display: none;
 }
 
