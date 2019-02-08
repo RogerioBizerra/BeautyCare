@@ -82,8 +82,8 @@ button:hover, button:focus{
     position:absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -90px;
-    width: 180px;
+    margin-left: -125px;
+    width: 250px;
 }
 /*TELA 1*/
 .tela-1{
