@@ -99,6 +99,9 @@ $("#enviarpesquisa").click(function () {
 					$('.tela-10').hide();
 					$('.tela-final').fadeIn(1000);
 					$('.tela-erro').hide();
+					setTimeout(function(){
+					   window.location.reload(1);
+					}, 10000);
 
 				} else if (text.status == "error") {
 
@@ -114,6 +117,9 @@ $("#enviarpesquisa").click(function () {
 					$('.tela-10').hide();
 					$('.tela-final').hide();
 					$('.tela-erro').fadeIn(1000);
+					setTimeout(function(){
+					   window.location.reload(1);
+					}, 20000);
 				}
 			}
 		});/**/

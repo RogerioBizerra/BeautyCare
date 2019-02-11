@@ -1,11 +1,3 @@
-var SPMaskBehavior = function (val) {
-  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-},
-spOptions = {
-  onKeyPress: function(val, e, field, options) {
-      field.mask(SPMaskBehavior.apply({}, arguments), options);
-    }
-};
 $('.resposta1').on('change', function() {
 	var nomeCliente = $("#resposta1").val();
 
@@ -14,12 +6,35 @@ $('.resposta1').on('change', function() {
 	}
 });
 
-$('.resposta3').mask(SPMaskBehavior, spOptions);
+$('.resposta3').inputmask({
+		mask: ["(99) 9999-9999", "(99) 99999-9999"],
+		keepStatic: true
+	});
 
-$('.resposta12').mask('000.000.000.000.000,00', {reverse: true});
-$('.resposta13').mask('000.000.000.000.000,00', {reverse: true});
-$('.resposta14').mask('000.000.000.000.000,00', {reverse: true});
-$('.resposta15').mask('000.000.000.000.000,00', {reverse: true});
+$('.resposta12').inputmask("decimal", {
+	    groupSeparator: ',',
+	    placeholder: '0.00',
+	    numericInput: true,
+	    autoGroup: true
+    });
+$('.resposta13').inputmask("decimal", {
+	    groupSeparator: ',',
+	    placeholder: '0.00',
+	    numericInput: true,
+	    autoGroup: true
+    });
+$('.resposta14').inputmask("decimal", {
+	    groupSeparator: ',',
+	    placeholder: '0.00',
+	    numericInput: true,
+	    autoGroup: true
+    });
+$('.resposta15').inputmask("decimal", {
+	    groupSeparator: ',',
+	    placeholder: '0.00',
+	    numericInput: true,
+	    autoGroup: true
+    });
 
 $('.resposta11').on('change', function() {
 	var resposta11 = $('input:radio[name=resposta11]:checked').val();
