@@ -46,7 +46,7 @@ button:hover, button:focus{
 
 .logo{
 	position: absolute;
-    top: 24px;
+    top: 30px;
     left: 50px;
     z-index: 1;
 }
