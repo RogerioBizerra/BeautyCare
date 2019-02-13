@@ -78,7 +78,7 @@ $("#enviarpesquisa").click(function () {
 
 		$.ajax({
 			type: "POST",
-			url: "http://rtpublicity.com.br/sites/panasonic/daiso/beautycare/api/createteam.php",
+			url: "http://rtpublicity.com.br/sites/panasonic/beautycare/php/insert.php",
 			data: dataString,
 			crossDomain: true,
 			cache: false,

@@ -112,6 +112,13 @@ button:hover, button:focus{
 .ir-tela-2:hover{
     outline: none;
 }
+.count-pesquisa {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+    font-size: 12px;
+}
 
 /*TELA 2*/
 .bg-tela2{
