@@ -3,7 +3,7 @@
 /*
  * conexão com o banco de dados local
 */
-$servidor = "localhost";
+/*$servidor = "localhost";
 $usuario = "rtpubli";
 $senha = "Publicidade_1";
 $banco = "firecomf_panasonic";/**/
@@ -11,7 +11,7 @@ $banco = "firecomf_panasonic";/**/
 /*
  * conexão com o banco de dados
 */
-/*$servidor = "localhost";
+$servidor = "localhost";
 $usuario = "firecomf_pana";
 $senha = ".5zFd4gI5l=x";
 $banco = "firecomf_panasonic";/**/
