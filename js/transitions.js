@@ -14,8 +14,8 @@ $('.tela-erro').hide();
 
 $('.ir-tela-2').click(function () {
 	$('.tela-1').hide();
-	$('.tela-2').fadeIn(1500);
-	$('.tela-3').hide();
+	$('.tela-2').hide();
+	$('.tela-3').fadeIn(1500);
 	$('.tela-4').hide();
 	$('.tela-5').hide();
 	$('.tela-6').hide();
@@ -28,7 +28,7 @@ $('.ir-tela-2').click(function () {
 
 	$( ".resposta1" ).focus();
 });
-$('.ir-tela-3').click(function () {
+/*$('.ir-tela-3').click(function () {
 	function validateEmail($email) {
 		var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 		return emailReg.test( $email );
@@ -42,7 +42,7 @@ $('.ir-tela-3').click(function () {
 		flagTela3 += "<strong>E-mail</strong>";
 	}else{
 		if(!validateEmail($('input[name=resposta2]').val())) flagTela3 += "<strong>E-mail digitado não é válido</strong>";
-	}/**/
+	}
 
 
 	if (flagTela3 == "") {
@@ -71,7 +71,7 @@ $('.ir-tela-3').click(function () {
 			confirmButtonAriaLabel: 'OK',
 		});
 	}
-});
+});/**/
 $('.ir-tela-4').click(function () {
 
 	var flagTela4 = "";

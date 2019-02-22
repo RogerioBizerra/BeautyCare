@@ -10,6 +10,7 @@ if($_POST){
     $resposta3      = $_POST['resposta3'];
     $resposta4      = $_POST['resposta4'];
     $resposta5      = $_POST['resposta5'];
+    $resposta5a     = $_POST['resposta5a'];
     $resposta6      = $_POST['resposta6'];
     $resposta7      = $_POST['resposta7'];
     $resposta8      = $_POST['resposta8'];
@@ -26,7 +27,7 @@ if($_POST){
     $resposta15     = $_POST['resposta15'];
     $resposta15a    = $_POST['resposta15a'];
 
-    $sql_insert = ("INSERT INTO pesquisa(`resposta1`, `resposta2`, `resposta3`, `resposta4`, `resposta5`, `resposta6`, `resposta7`, `resposta8`, `resposta9`, `resposta10`, `resposta11`, `resposta11a`, `resposta12`, `resposta12a`, `resposta13`, `resposta13a`, `resposta14`, `resposta14a`, `resposta15`, `resposta15a`) VALUES ('$resposta1', '$resposta2', '$resposta3', '$resposta4', '$resposta5', '$resposta6', '$resposta7', '$resposta8', '$resposta9', '$resposta10', '$resposta11', '$resposta11a', '$resposta12', '$resposta12a', '$resposta13', '$resposta13a', '$resposta14', '$resposta14a', '$resposta15', '$resposta15a')");
+    $sql_insert = ("INSERT INTO pesquisa(`resposta1`, `resposta2`, `resposta3`, `resposta4`, `resposta5`, `resposta5a`, `resposta6`, `resposta7`, `resposta8`, `resposta9`, `resposta10`, `resposta11`, `resposta11a`, `resposta12`, `resposta12a`, `resposta13`, `resposta13a`, `resposta14`, `resposta14a`, `resposta15`, `resposta15a`) VALUES ('$resposta1', '$resposta2', '$resposta3', '$resposta4', '$resposta5', '$resposta5a', '$resposta6', '$resposta7', '$resposta8', '$resposta9', '$resposta10', '$resposta11', '$resposta11a', '$resposta12', '$resposta12a', '$resposta13', '$resposta13a', '$resposta14', '$resposta14a', '$resposta15', '$resposta15a')");
 
     $result_insert = mysqli_query($link, $sql_insert);/**/
 

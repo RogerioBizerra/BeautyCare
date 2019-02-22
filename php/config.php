@@ -3,9 +3,9 @@
 /*
  * conexão com o banco de dados local
 */
-$servidor = "rtpubli";
-$usuario = "Publicidade_1";
-$senha = "localhost";
+$servidor = "localhost";
+$usuario = "rtpubli";
+$senha = "Publicidade_1";
 $banco = "firecomf_panasonic";/**/
 
 /*

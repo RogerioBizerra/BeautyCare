@@ -4,6 +4,7 @@ var resposta2 	= decodeURI(getUrlVars()["resposta2"]);
 var resposta3 	= decodeURI(getUrlVars()["resposta3"]);
 var resposta4 	= decodeURI(getUrlVars()["resposta4"]);
 var resposta5 	= decodeURI(getUrlVars()["resposta5"]);
+var resposta5a 	= decodeURI(getUrlVars()["resposta5a"]);
 var resposta6 	= decodeURI(getUrlVars()["resposta6"]);
 var resposta7 	= decodeURI(getUrlVars()["resposta7"]);
 var resposta8 	= decodeURI(getUrlVars()["resposta8"]);
@@ -53,6 +54,7 @@ $("#enviarpesquisa").click(function () {
 		var resposta3 	= $("#resposta3").val();
 		var resposta4 	= $('input[name=resposta4]:checked').val();
 		var resposta5 	= $('input[name=resposta5]:checked').val();
+		var resposta5a 	= $("#resposta5a").val();
 		var resposta6 	= $('input[name=resposta6]:checked').val();
 		var resposta7 	= $('input[name=resposta7]:checked').val();
 		var resposta8 	= $('input[name=resposta8]:checked').val();

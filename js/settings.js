@@ -1,4 +1,4 @@
-$('.resposta1').on('change', function() {
+/*$('.resposta1').on('change', function() {
 	var nomeCliente = $("#resposta1").val();
 
 	if(nomeCliente != ""){
@@ -10,7 +10,7 @@ $('.resposta3').inputmask({
 		mask: ["(99) 9999-9999", "(99) 99999-9999"],
 		keepStatic: true
 	});
-
+*/
 $('.resposta12').inputmask("decimal", {
 	    groupSeparator: ',',
 	    placeholder: '0.00',
