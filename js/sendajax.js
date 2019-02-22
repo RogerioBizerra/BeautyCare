@@ -74,7 +74,7 @@ $("#enviarpesquisa").click(function () {
 		var resposta15 	= $("#resposta15").val();
 		var resposta15a = $('input[name=resposta15a]:checked').val();
 
-		var dataString = "resposta1=" + resposta1 + "&resposta2=" + resposta2 + "&resposta3=" + resposta3 + "&resposta4=" + resposta4 + "&resposta5=" + resposta5 + "&resposta6=" + resposta6 + "&resposta7=" + resposta7 + "&resposta8=" + resposta8 + "&resposta9=" + resposta9 + "&resposta10=" + resposta10 + "&resposta11=" + resposta11 + "&resposta11a=" + resposta11a + "&resposta12=" + resposta12 + "&resposta12a=" + resposta12a + "&resposta13=" + resposta13 + "&resposta13a=" + resposta13a + "&resposta14=" + resposta14 + "&resposta14a=" + resposta14a + "&resposta15=" + resposta15 + "&resposta15a=" + resposta15a + "&update=";
+		var dataString = "resposta1=" + resposta1 + "&resposta2=" + resposta2 + "&resposta3=" + resposta3 + "&resposta4=" + resposta4 + "&resposta5=" + resposta5 + "&resposta5a=" + resposta5a + "&resposta6=" + resposta6 + "&resposta7=" + resposta7 + "&resposta8=" + resposta8 + "&resposta9=" + resposta9 + "&resposta10=" + resposta10 + "&resposta11=" + resposta11 + "&resposta11a=" + resposta11a + "&resposta12=" + resposta12 + "&resposta12a=" + resposta12a + "&resposta13=" + resposta13 + "&resposta13a=" + resposta13a + "&resposta14=" + resposta14 + "&resposta14a=" + resposta14a + "&resposta15=" + resposta15 + "&resposta15a=" + resposta15a + "&update=";
 
 		//console.log(dataString);
 
